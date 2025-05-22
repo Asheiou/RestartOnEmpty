@@ -7,15 +7,15 @@ website: https://mc.asheiou.uk
 description: >
              Allows you to set your server to restart on empty.
 commands:
-    restartonempty:
-        aliases: [roe, ronempty]
-        description: Set the server to restart on empty.
-        usage: /<command> [true/false]
-        permission: restartonempty.use
-        permission-message: You don't have restartonempty.use.
+  restartonempty:
+    aliases: [roe, ronempty]
+    description: Set the server to restart on empty.
+    usage: /<command> [true/false]
+    permission: restartonempty.use
+    permission-message: You don't have restartonempty.use.
 
 permissions:
-    restartonempty.use:
-        description: Allows use of the plugin
-        default: op
+  restartonempty.use:
+    description: Allows use of the plugin
+    default: op
         
