@@ -2,7 +2,7 @@ name: RestartOnEmpty
 main: uk.asheiou.restartonempty.RestartOnEmpty
 version: ${project.version}
 author: Asheiou
-api-version: 1.17
+api-version: 1.18
 website: https://mc.asheiou.uk
 description: >
              Allows you to set your server to restart on empty.
