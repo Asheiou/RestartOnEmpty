@@ -22,6 +22,9 @@ public class ROECommandExecutor implements CommandExecutor {
         ROEToggle.setStatus(false);
         sender.sendMessage(ChatColor.GREEN + "The server will no longer restart on empty.");
         return true;
+      case "status":
+        sender.sendMessage(ChatColor.GREEN + "The server " + (ROEToggle.getStatus() ? "will" : "will not") + " restart on empty.");
+        return true;
       default:
         sender.sendMessage(ChatColor.RED + "Argument not recognised! Usage:");
         return false;

@@ -10,7 +10,7 @@ commands:
   restartonempty:
     aliases: [roe, ronempty]
     description: Set the server to restart on empty.
-    usage: /<command> [true/false]
+    usage: /<command> [true/false/status]
     permission: restartonempty.use
     permission-message: You don't have restartonempty.use.
 
