@@ -9,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin
 class EventListener(private val plugin: JavaPlugin) : Listener {
 
   @EventHandler(priority = EventPriority.LOWEST)
-  fun onPlayerQuit(event: PlayerQuitEvent?) {
+  fun onPlayerQuit(event: PlayerQuitEvent) {
     ROEQuitTask().runTaskLater(this.plugin, 3)
   }
 }
