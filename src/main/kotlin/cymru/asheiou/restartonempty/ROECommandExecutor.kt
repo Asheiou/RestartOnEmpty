@@ -1,10 +1,9 @@
-package uk.asheiou.restartonempty
+package cymru.asheiou.restartonempty
 
 import net.md_5.bungee.api.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
-import java.util.Locale
 import java.util.Locale.getDefault
 
 class ROECommandExecutor : CommandExecutor {

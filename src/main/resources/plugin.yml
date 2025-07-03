@@ -1,5 +1,5 @@
-ame: RestartOnEmpty
-main: uk.asheiou.restartonempty.RestartOnEmpty
+name: RestartOnEmpty
+main: cymru.asheiou.restartonempty.RestartOnEmpty
 version: ${project.version}
 author: Asheiou
 api-version: 1.18

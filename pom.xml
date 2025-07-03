@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>uk.asheiou</groupId>
   <artifactId>restartonempty</artifactId>
-  <version>1.0.1</version>
+  <version>1.1.1</version>
   <packaging>jar</packaging>
   <name>RestartOnEmpty</name>
   <inceptionYear>2025</inceptionYear>
@@ -38,7 +38,6 @@
     <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
     <resources>
       <resource>
-        <targetPath>restartonempty</targetPath>
         <directory>${project.basedir}/src/main/resources</directory>
         <filtering>true</filtering>
       </resource>
@@ -117,29 +116,37 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.6.0</version>
-        <configuration>
-          <artifactSet>
-            <includes>
-              <include>kotlin:*</include>
-              <include>org.jetbrains.kotlin:*</include>
-              <include>org.bstats:*</include>
-            </includes>
-          </artifactSet>
-          <relocations>
-            <relocation>
-              <pattern>org.jetbrains</pattern>
-              <shadedPattern>cymru.asheiou.afkwebhook.kotlin</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>kotlin</pattern>
-              <shadedPattern>cymru.asheiou.afkwebhook.kotlin</shadedPattern>
-            </relocation>
-            <relocation>
-              <pattern>org.bstats</pattern>
-              <shadedPattern>cymru.asheiou.afkwebhook.bstats</shadedPattern>
-            </relocation>
-          </relocations>
-        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>kotlin:*</include>
+                  <include>org.jetbrains.kotlin:*</include>
+                  <include>org.bstats:*</include>
+                </includes>
+              </artifactSet>
+              <relocations>
+                <relocation>
+                  <pattern>org.jetbrains</pattern>
+                  <shadedPattern>cymru.asheiou.restartonempty.kotlin</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>kotlin</pattern>
+                  <shadedPattern>cymru.asheiou.restartonempty.kotlin</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.bstats</pattern>
+                  <shadedPattern>cymru.asheiou.restartonempty.bstats</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

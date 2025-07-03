@@ -1,4 +1,4 @@
-package uk.asheiou.restartonempty
+package cymru.asheiou.restartonempty
 
 import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority

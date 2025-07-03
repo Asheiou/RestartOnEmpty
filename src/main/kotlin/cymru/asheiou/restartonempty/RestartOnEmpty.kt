@@ -1,4 +1,4 @@
-package uk.asheiou.restartonempty
+package cymru.asheiou.restartonempty
 
 import org.bstats.bukkit.Metrics
 import org.bukkit.plugin.java.JavaPlugin
