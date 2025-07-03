@@ -1,4 +1,4 @@
-name: RestartOnEmpty
+ame: RestartOnEmpty
 main: uk.asheiou.restartonempty.RestartOnEmpty
 version: ${project.version}
 author: Asheiou
